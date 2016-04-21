@@ -7,7 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1>hello world</h1>
+<h1>Faux-tagram</h1>
+
+<% flash.each do |type, message| %>
+    <p class="flash <%= type %>"><%= message %></p>
+  <% end %>
+
 <h2><%= link_to "All Entries", entries_path %></h2>
 <%= yield %>
 

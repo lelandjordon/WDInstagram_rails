@@ -37,19 +37,13 @@ class EntriesController < ApplicationController
   def destroy
     @entry = Entry.find(params[:id])
     @entry.destroy
-    flash[:notice] = "#{@entry.title} successfully deleted."
+    flash[:notice] = "#{@entry.author} successfully deleted."
     redirect_to @entry
   end
 
   private
   def entry_params
-    params.require(:entry).permit(:body, :author, :title)
+    params.require(:entry).permit(:author, :photo_url, :date_taken)
   end
-
-
-
-
-
-
 
 end
