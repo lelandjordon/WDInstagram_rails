@@ -1,1 +1,6 @@
 app/views/entries/index
+
+<%= link_to "Add New Entry", new_entry_path %>
+
+
+<%= render partial: 'entry', collection: @entries %>

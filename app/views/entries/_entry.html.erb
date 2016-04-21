@@ -1,0 +1,7 @@
+  <p>
+    <%= link_to entry.author, entry_path(entry) %>
+    <%= entry.photo_url %>
+    <%= entry.date_taken %>
+    <%= link_to "Delete this entry", entry_path(entry), method: :delete%>
+    <%= link_to "Edit this entry", edit_entry_path(entry)%>
+  </p>
