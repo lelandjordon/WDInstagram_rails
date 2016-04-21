@@ -1,28 +1,37 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+User stories:
+I want to click on a link which displays all my entries.
+I want to click on an entry to show it by itself.
+I want to click on something to let me create a new entry.
+I want to click on an entry to edit it.
+I want to be able to delete an entry.
 
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+Your app should have the following RESTful actions:
+
+index (displays all entries)
+show (displays a specific entry)
+new (displays a form to create a new entry)
+create (saves a new entry it to the database)
+edit (displays a form for editing a particular entry)
+update (takes input from the edit form and updates the entry in the db appropriately)
+destroy (deletes a specific entry from the database)
+Instructions
+
+Write 5 user stories for your app.
+Keep it simple and think about what functionality your MVP needs.
+Build ERD
+Write the app. (If you need more instructions, reference tunr or lesson plans on rails )
+Bonus
+
+Add a column for caption to your Entry, which is a text description of the shot. You'll need to generate a database migration for this and then update the rest of your app to be able to display these captions.
+Instead of using a string for a date, try using a ruby DateTime Object
+Add a second "Comments" model to your app so that users may leave comments on each of your Entries.
+Give your Comments model full CRUD capability.
+Super bonus
+
+Create the ability to make a new entry using a random GIF from the Giphy API
